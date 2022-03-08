@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup>
 import { reactive, ref } from 'vue'
 const dialogTableVisible = ref(false)
 const dialogFormVisible = ref(false)
@@ -10,8 +10,7 @@ const props = defineProps(['show'])
 const defaultTime = new Date()
 
 const closeDialog = () => {
-  console.log('hello');
-  
+  console.log('Close Dialog...');
   emit('close')
 }
 

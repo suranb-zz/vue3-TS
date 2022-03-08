@@ -1,6 +1,6 @@
-<script lang="ts" setup>
+<script setup>
 
-const underLine: Boolean = false;
+const underLine = false;
 
 const tableData = [
   {
@@ -42,7 +42,7 @@ const tableData = [
 ]
 
 const baseUrl = "https://online2.superoffice.com/Cust25790/CS/scripts/ticket.fcgi?_sf=0&action=viewTableEntry&table=ticket&id=";
-const handleClick = (index: number, ticketId: number) => {
+const handleClick = (index, ticketId) => {
   window.open(baseUrl + ticketId);
 }
 </script>

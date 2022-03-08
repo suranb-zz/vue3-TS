@@ -1,11 +1,10 @@
-<script lang="ts" setup>
+<script setup>
 import { reactive, ref } from 'vue'
 import CreateActivity from './CreateActivity.vue'
-const companyName: String = "Ganske Enkelt AS"; //ref(new Date())
-const personName: String = "Suran Basharati"; //ref(new Date())
-//const props = defineProps(['showDialog'])
+const companyName = "Ganske Enkelt AS"; //ref(new Date())
+const personName = "Suran Basharati"; //ref(new Date())
 
-let items: Object = ref([
+let items = ref([
   { "id": 1, "name": "SuperOffice Norge AS", "src": "./src/assets/company.svg" },
   { "id": 2, "name": "Suran Basharati", "src": "./src/assets/person.svg" },
   { "id": 3, "name": "Opprett Sak", "src": "./src/assets/request.svg" },
@@ -18,8 +17,8 @@ let showDialog = ref(false)
 const cardClick = () => {
   showDialog.value = true
 }
-
 </script>
+<!-- TEMPLATE -->
 <template>
   <el-row>
     <el-col>
@@ -40,7 +39,7 @@ const cardClick = () => {
   </el-row>
   <CreateActivity :show="showDialog" @close="showDialog = false"></CreateActivity>
 </template>
-
+<!-- STYLE -->
 <style>
 .bottom {
   margin-top: 13px;
